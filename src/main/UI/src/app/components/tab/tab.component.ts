@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {TabConfig, TabData} from "../../configs/TabDataConfig";
-import {DynamicTwitterService} from "../../services/dynamic-twitter/dynamic-twitter.service";
-import {DynamicLinkedInService} from "../../services/dynamic-linkedIn/dynamic-linked-in.service";
 
 @Component({
   selector: 'app-tab',
@@ -12,10 +10,10 @@ export class TabComponent implements OnInit {
 
   tabConfig: TabData[];
 
-  constructor(twitterService: DynamicTwitterService, linkedInService: DynamicLinkedInService) {
+  constructor() {
     this.tabConfig = [
-      TabConfig.createLinkedInWithService(linkedInService),
-      TabConfig.createTwitterWithService(twitterService),
+      TabConfig.createLinkedInWithService(null),
+      TabConfig.createTwitterWithService(null),
     ];
   }
 

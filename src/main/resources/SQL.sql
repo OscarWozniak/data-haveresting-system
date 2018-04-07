@@ -1,5 +1,9 @@
+create DATABASE dataHaverestingSystem1;
+
 show DATABASES;
-use test2;
+use dataHaverestingSystem;
+drop DATABASE dataHaverestingSystem;
+
 
 show TABLES;
 

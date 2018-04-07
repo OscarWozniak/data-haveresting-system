@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class Browser {
 
   public static final int DEFAULT_TEMP_LIMIT = 3;
-  private static final String PATH_TO_DRIVER = "./src/main/java/com/example/demofull/clover/selenium/resources/geckodriver";
+  private static final String PATH_TO_DRIVER = "./src/main/java/org/owozniak/datahaverestingsystem/clover/selenium/resources/geckodriver";
   private static final int DEFAULT_GLOBAL_LIMIT = 30;
   private static WebDriver driver = null;
 

@@ -13,8 +13,7 @@ import java.util.stream.Collectors;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ConnectionsPage extends Page {
 
-  @Getter
-  @FindBy(css = ".mn-connections__list .mn-person-card")
+  @FindBy(css = "ul .mn-connection-card")
   List<WebElement> personCard;
 
   public ConnectionsPage() {
@@ -28,7 +27,7 @@ public class ConnectionsPage extends Page {
   public List<String> mapCardToLink(){
     return personCard.stream()
             .map(c -> c
-                    .findElement(By.className("mn-person-info__link"))
+                    .findElement(By.className("mn-connection-card__picture"))
                     .getAttribute("href"))
             .collect(Collectors.toList());
   }

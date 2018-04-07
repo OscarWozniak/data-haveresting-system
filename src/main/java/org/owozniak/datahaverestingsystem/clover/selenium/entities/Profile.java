@@ -21,17 +21,17 @@ public class Profile {
   String location;
 
   @OneToMany
-  List<ProfileExperience> experience;
+  List<ProfileExperience> experiences;
   @OneToMany
-  List<ProfileEducation> education;
+  List<ProfileEducation> educations;
 
 
   public Profile(String firstName, String surName, String location, List<ProfileExperience> experience, List<ProfileEducation> education) {
     this.firstName = firstName;
     this.surName = surName;
     this.location = location;
-    this.experience = experience;
-    this.education = education;
+    this.experiences = experience;
+    this.educations = education;
   }
 
   public static Profile of(ProfilePage page) {
