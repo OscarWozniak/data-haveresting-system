@@ -1,0 +1,29 @@
+<form class="linkedInTab">
+  <mat-card>
+    <mat-card-title class="linkedInTab__title">Selenium Clover</mat-card-title>
+
+    <mat-card-content>
+
+      <mat-form-field class="linkedInTab__inputField">
+        <input matInput placeholder="Login">
+      </mat-form-field>
+
+      <mat-form-field class="linkedInTab__inputField">
+        <input matInput placeholder="Password" type="password">
+      </mat-form-field>
+
+      <mat-form-field id="limitRecords">
+        <input type="number" matInput placeholder="Limit records" min="0">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" onclick="doClover()">
+        <mat-icon aria-label="Example icon-button with a heart icon">android</mat-icon>
+        Clover!
+      </button>
+
+    </mat-card-content>
+  </mat-card>
+
+  <app-history-list></app-history-list>
+
+</form>

@@ -1,0 +1,29 @@
+<mat-card class="historyLog hoverable">
+  <h6>{{user}}</h6>
+
+  <mat-card-content class="historyLog__buttons">
+    <span>
+      <button mat-icon-button color="primary" routerLink="/user" routerLinkActive="active">
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <mat-chip-list class="info">
+        <mat-chip>
+          {{count}}
+          <mat-icon>account_circle</mat-icon>
+        </mat-chip>
+        <mat-chip>
+          {{date}}
+          <mat-icon>date_range</mat-icon>
+        </mat-chip>
+      </mat-chip-list>
+    </span>
+
+    <span>
+      <button mat-icon-button color="warn" onclick="deleteHistoryLog()">
+        <mat-icon>delete_forever</mat-icon>
+      </button>
+    </span>
+  </mat-card-content>
+
+</mat-card>

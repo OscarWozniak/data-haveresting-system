@@ -1,0 +1,40 @@
+<form class="twitterTab">
+  <mat-card>
+    <mat-card-title class="twitterTab__title">Rest Clover</mat-card-title>
+
+    <mat-card-content>
+
+      <mat-form-field class="twitterTab__inputField">
+        <input matInput placeholder="Consumer Key (API Key)" type="password">
+      </mat-form-field>
+
+      <mat-form-field class="twitterTab__inputField">
+        <input matInput placeholder="Consumer Secret (API Secret)" type="password">
+      </mat-form-field>
+
+      <mat-form-field class="twitterTab__inputField">
+        <input matInput placeholder="Access Token" type="password">
+      </mat-form-field>
+
+      <mat-form-field class="twitterTab__inputField">
+        <input matInput placeholder="Access Token Secret" type="password">
+      </mat-form-field>
+
+      <mat-form-field id="selectUser">
+        <mat-select placeholder="User Name to Spy">
+          <mat-option [value]="'ITOskarWozniak'"> Oskar Woźniak </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" onclick="doClover()">
+        <mat-icon aria-label="Example icon-button with a heart icon">android</mat-icon>
+        Clover!
+      </button>
+
+    </mat-card-content>
+  </mat-card>
+
+  <app-history-list></app-history-list>
+
+</form>
+

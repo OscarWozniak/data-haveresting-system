@@ -1,0 +1,20 @@
+.user {
+  display: inline;
+}
+
+.mat-chip-list-wrapper {
+  display: inline !important;
+}
+
+.historyLog {
+  border: 1px solid rgba(0, 0, 0, .07);
+}
+
+.hoverable:hover, button:hover {
+  background-color: rgba(0, 0, 0, .07);
+}
+
+.historyLog__buttons {
+  display: flex;
+  justify-content: space-between;
+}

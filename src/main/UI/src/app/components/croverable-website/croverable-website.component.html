@@ -1,0 +1,41 @@
+<form class="twitterTab">
+  <mat-card>
+    <mat-card-title class="title">
+      {{title}}
+    </mat-card-title>
+
+    <mat-card-content>
+
+      <mat-form-field class="inputField">
+        <input matInput placeholder="Login">
+      </mat-form-field>
+
+      <mat-form-field class="inputField">
+        <input matInput placeholder="Password" type="password">
+      </mat-form-field>
+
+      <mat-form-field id="limitRecords">
+        <input type="number" matInput placeholder="Limit records" min="0">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" onclick="doClover()">
+        <mat-icon aria-label="Example icon-button with a heart icon">android</mat-icon>
+        Clover!
+      </button>
+
+
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+
+    <mat-card-title>History Log</mat-card-title>
+
+    <mat-card-content>
+      <app-history-list [logItems]="logItems" [service]="service"></app-history-list>
+    </mat-card-content>
+
+  </mat-card>
+</form>
+
+
+

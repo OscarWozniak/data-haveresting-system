@@ -1,0 +1,19 @@
+<mat-card>
+
+  <mat-card-title>History Log</mat-card-title>
+
+  <mat-card-content>
+    <app-history-log
+      *ngFor="let record of history"
+      [user]="record.user"
+      [id]="record.id"
+      [date]="record.date"
+      [count]="record.count"
+      [service]="service"
+    ></app-history-log>
+  </mat-card-content>
+
+</mat-card>
+
+
+
