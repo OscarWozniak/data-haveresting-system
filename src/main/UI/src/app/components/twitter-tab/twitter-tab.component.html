@@ -1,32 +1,65 @@
-<form class="twitterTab">
+<div class="twitterTab">
   <mat-card>
     <mat-card-title class="twitterTab__title">Rest Clover</mat-card-title>
 
     <mat-card-content>
 
       <mat-form-field class="twitterTab__inputField">
-        <input matInput placeholder="Consumer Key (API Key)" type="password">
+        <input
+          matInput
+          placeholder="Consumer Key (API Key)"
+          type="password"
+          [(ngModel)]="model.auth.consumerKey"
+        >
       </mat-form-field>
 
       <mat-form-field class="twitterTab__inputField">
-        <input matInput placeholder="Consumer Secret (API Secret)" type="password">
+        <input
+          matInput
+          placeholder="Consumer Secret (API Secret)"
+          type="password"
+          [(ngModel)]="model.auth.consumerSecret"
+        >
       </mat-form-field>
 
       <mat-form-field class="twitterTab__inputField">
-        <input matInput placeholder="Access Token" type="password">
+        <input
+          matInput
+          placeholder="Access Token"
+          type="password"
+          [(ngModel)]="model.auth.accessToken"
+        >
       </mat-form-field>
 
       <mat-form-field class="twitterTab__inputField">
-        <input matInput placeholder="Access Token Secret" type="password">
+        <input
+          matInput
+          placeholder="Access Token Secret"
+          type="password"
+          [(ngModel)]="model.auth.accessTokenSecret"
+        >
       </mat-form-field>
 
       <mat-form-field id="selectUser">
-        <mat-select placeholder="User Name to Spy">
-          <mat-option [value]="'ITOskarWozniak'"> Oskar Woźniak </mat-option>
+        <mat-select
+          placeholder="User Name to Spy"
+          [(ngModel)]="model.friendIdName"
+        >
+          <mat-option [value]="'ITOskarWozniak'"> Oskar Woźniak</mat-option>
         </mat-select>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" onclick="doClover()">
+      <mat-form-field id="limitRecords">
+        <input
+          type="number"
+          matInput
+          placeholder="Limit records"
+          min="0"
+          [(ngModel)]="model.limit"
+        >
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="doClover()">
         <mat-icon aria-label="Example icon-button with a heart icon">android</mat-icon>
         Clover!
       </button>
@@ -36,5 +69,5 @@
 
   <app-history-list></app-history-list>
 
-</form>
+</div>
 

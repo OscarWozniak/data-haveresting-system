@@ -1,8 +1,11 @@
 package org.owozniak.datahaverestingsystem.entities;
 
-import org.owozniak.datahaverestingsystem.clover.selenium.entities.Profile;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.owozniak.datahaverestingsystem.clover.rest.entity.TwitterUser;
+import org.owozniak.datahaverestingsystem.clover.selenium.entities.Profile;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @FieldDefaults(level= AccessLevel.PRIVATE)
-public class HistoryLinkedId {
+public class HistoryTwitter {
 
   @Id
   @GeneratedValue
@@ -26,16 +29,16 @@ public class HistoryLinkedId {
   int count;
 
   @OneToMany
-  List<Profile> profiles;
+  List<TwitterUser> profiles;
 
-  private HistoryLinkedId(Date date, String userName, List<Profile> profiles) {
+  private HistoryTwitter(Date date, String userName, List<TwitterUser> profiles) {
     this.date = date;
     this.userName = userName;
     this.count = profiles.size();
     this.profiles = profiles;
   }
 
-  public static HistoryLinkedId create(String userName, List<Profile> profiles){
-    return new HistoryLinkedId(new Date(), userName,  profiles);
+  public static HistoryTwitter create(String userName, List<TwitterUser> profiles){
+    return new HistoryTwitter(new Date(), userName,  profiles);
   }
 }

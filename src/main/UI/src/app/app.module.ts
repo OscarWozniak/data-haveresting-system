@@ -13,10 +13,10 @@ import {UserTableComponent} from './components/user-table/user-table.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {APP_ROUTES} from "./routes";
 import {MaterialModule} from "./material.module";
-import {DynamicLinkedInService} from "./services/dynamic-linkedIn/dynamic-linked-in.service";
-import {DynamicTwitterService} from "./services/dynamic-twitter/dynamic-twitter.service";
 import { TwitterTabComponent } from './components/twitter-tab/twitter-tab.component';
 import { LinkedInTabComponent } from './components/linked-in-tab/linked-in-tab.component';
+import {TwitterService} from "./services/twitter/twitter.service";
+import {LinkedInService} from "./services/linkedIn/linked-in.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { LinkedInTabComponent } from './components/linked-in-tab/linked-in-tab.c
     ReactiveFormsModule,
     APP_ROUTES
   ],
-  providers: [DynamicLinkedInService, DynamicTwitterService],
+  providers: [TwitterService, LinkedInService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

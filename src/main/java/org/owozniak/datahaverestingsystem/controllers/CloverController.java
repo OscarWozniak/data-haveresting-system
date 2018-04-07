@@ -5,6 +5,7 @@ import org.owozniak.datahaverestingsystem.clover.rest.entity.TwitterUser;
 import org.owozniak.datahaverestingsystem.clover.selenium.SeleniumCloverLinkedIn;
 import org.owozniak.datahaverestingsystem.clover.selenium.entities.AuthData;
 import org.owozniak.datahaverestingsystem.clover.selenium.entities.Profile;
+import org.owozniak.datahaverestingsystem.entities.HistoryLinkedId;
 import org.owozniak.datahaverestingsystem.models.LinkedInCloverModel;
 import org.owozniak.datahaverestingsystem.models.TwitterCloverModel;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,9 @@ public class CloverController {
 
   @PostMapping("/clover/linked-in")
   public List<Profile> getLinkedInProfiles(@RequestBody LinkedInCloverModel model) {
-    return SeleniumCloverLinkedIn.getFriendsProfiles(model);
+    List<Profile> profiles = SeleniumCloverLinkedIn.getFriendsProfiles(model);
+    HistoryLinkedId history = HistoryLinkedId.create(model.getAuth().getLogin(), profiles);
+
+    return profiles;
   }
 }

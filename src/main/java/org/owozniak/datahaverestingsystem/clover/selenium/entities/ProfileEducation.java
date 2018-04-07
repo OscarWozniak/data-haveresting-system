@@ -1,14 +1,17 @@
 package org.owozniak.datahaverestingsystem.clover.selenium.entities;
 
-import org.owozniak.datahaverestingsystem.clover.selenium.browser.Browser;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.owozniak.datahaverestingsystem.clover.selenium.browser.Browser;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-import static org.owozniak.datahaverestingsystem.clover.selenium.browser.Browser.DEFAULT_TEMP_LIMIT;
 import static org.owozniak.datahaverestingsystem.utils.OptionalUtils.text;
 
 @Entity

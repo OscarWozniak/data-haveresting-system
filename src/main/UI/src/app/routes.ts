@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: '**', component: PageNotFoundComponent}
 ];
 
-const config = {enableTracing: true};
+const config = {enableTracing: false};
 
 export const APP_ROUTES = RouterModule.forRoot(routes, config);
 
